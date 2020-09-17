@@ -42,17 +42,17 @@ Things you may want to cover:
 
 
 ## items テーブル
-| Column       | Type       | Options                        |
-| ------------ | ---------  | ------------------------------ |
-| name         | string     | null: false                    | 
-| text         | text       | null: false                    |
-| price        | integer    | null: false                    |
-| category     | integer    | null: false                    |
-| condition    | integer    | null: false                    |
-| delivery_fee | integer    | null: false                    |
-| place        | integer    | null: false                    |
-| days         | integer    | null: false                    |
-| user_id      | integer    | null: false, foreign_key: true |
+| Column          | Type       | Options                        |
+| --------------- | ---------  | ------------------------------ |
+| name            | string     | null: false                    | 
+| text            | text       | null: false                    |
+| price           | integer    | null: false                    |
+| category_id     | integer    | null: false                    |
+| condition_id    | integer    | null: false                    |
+| delivery_fee_id | integer    | null: false                    |
+| place_id        | integer    | null: false                    |
+| days_id         | integer    | null: false                    |
+| user_id         | integer    | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
