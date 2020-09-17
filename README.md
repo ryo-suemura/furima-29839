@@ -55,7 +55,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- has_one :purchases
+- has_one :purchase
 
 ## purchases テーブル
 | Column           | Type       | Option                         |
