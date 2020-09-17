@@ -60,12 +60,12 @@ Things you may want to cover:
 ## purchases テーブル
 | Column           | Type       | Option                         |
 | ---------------- | ---------- | ------------------------------ |
-| postal_code      | integer    | null: false                    |
+| postal_code      | string     | null: false                    |
 | prefecture       | integer    | null: false                    |
 | city             | string     | null: false                    |
 | address          | string     | null: false                    |
 | building_name    | string     |                                |
-| telephone_number | string    | null: false                    |
+| telephone_number | string     | null: false                    |
 | items_id         | integer    | null: false, foreign_key: true |
 | user_id          | integer    | null: false, foreign_key: true |
 
