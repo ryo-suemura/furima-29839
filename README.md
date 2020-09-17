@@ -65,7 +65,7 @@ Things you may want to cover:
 | city             | string     | null: false                    |
 | address          | string     | null: false                    |
 | building_name    | string     |                                |
-| telephone_number | integer    | null: false                    |
+| telephone_number | string    | null: false                    |
 | items_id         | integer    | null: false, foreign_key: true |
 | user_id          | integer    | null: false, foreign_key: true |
 
