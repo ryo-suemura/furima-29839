@@ -61,7 +61,7 @@ Things you may want to cover:
 ## purchases テーブル
 | Column           | Type       | Option                         |
 | ---------------- | ---------- | ------------------------------ |
-| items_id         | integer    | null: false, foreign_key: true |
+| item_id         | integer    | null: false, foreign_key: true |
 | user_id          | integer    | null: false, foreign_key: true |
 
 ### Association
@@ -78,6 +78,7 @@ Things you may want to cover:
 | address          | string     | null: false |
 | building_name    | string     |             |
 | telephone_number | string     | null: false |
+| purchase_id      | integer    | null: false |
 
 ## Association
 belongs_to :purchase
