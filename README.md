@@ -38,7 +38,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
-- has_one :purchases
+
 
 ## items テーブル
 | Column       | Type       | Options                        |
@@ -55,7 +55,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- has_one :purchase
+
 
 ## purchases テーブル
 | Column           | Type       | Option                         |
@@ -70,5 +70,4 @@ Things you may want to cover:
 | user_id          | integer    | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :users
-- belongs_to :items
+
