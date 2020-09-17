@@ -34,7 +34,7 @@ Things you may want to cover:
 | email            | string  | null: false |
 | password         | string  | null: false |
 | nickname         | string  | null: false |
-| birthday         | integer | null: false |
+| birthday         | date    | null: false |
 
 ### Association
 - has_many :items
