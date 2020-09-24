@@ -8,8 +8,10 @@ class Item < ApplicationRecord
   belongs_to_active_hash :place
   belongs_to_active_hash :days
 
-  validates :name, :text, :price, :category, :condition, :delivery_fee, :place, :days, :user_id, :image, presence: true
-  validates :category_id, :condition_id, :delivery_fee_id, :place_id, :days_id, numericality: { other_than: 1 }
-  validates :price, numericality: { with: /\A[0-9]+\z/, message: 'Half-Width number' }
-  validates :price, inclusion: { in: 300..9_999_999, message: 'Out of setting range' }
+  with_options presence: true do
+    validates :name,  :user_id, :text, :image
+    validates :category_id, :condition_id, :delivery_fee_id, :place_id, :days_id, numericality: { other_than: 1 }
+    validates :price, numericality: { with: /\A[0-9]+\z/, message: 'Half-Width number' }
+    validates :price, inclusion: { in: 300..9_999_999, message: 'Out of setting range' }
+  end
 end
