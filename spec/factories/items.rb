@@ -3,7 +3,7 @@ FactoryBot.define do
     name              { Faker::Name }
     text              { Faker::Lorem }
     category_id       { '2' }
-    condition_id      { '2'}
+    condition_id      { '2' }
     delivery_fee_id   {'2'}
     place_id          {'2'}
     days_id           {'2'}
