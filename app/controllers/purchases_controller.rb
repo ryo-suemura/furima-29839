@@ -1,5 +1,6 @@
 class PurchasesController < ApplicationController
   before_action :setting
+  before_action :move_to_login
   before_action :move_to_index
 
   def index
@@ -37,7 +38,16 @@ class PurchasesController < ApplicationController
     )
   end
 
-  def move_to_index
-    redirect_to root_path if user_signed_in? != true || @item.user_id == current_user.id || @item.purchase.present?
+  def move_to_login
+    if user_signed_in? != true
+      redirect_to new_user_session_path
+    end
   end
+
+  def move_to_index
+    if   @item.user_id == current_user.id || @item.purchase.present?  
+      redirect_to root_path
+    end
+  end
+
 end
