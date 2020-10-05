@@ -4,6 +4,4 @@ class Buyer < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :place
-
-
 end
