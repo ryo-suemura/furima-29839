@@ -5,7 +5,6 @@ FactoryBot.define do
     place_id                 { '2' }
     city                     { '岐阜県' }
     address                  { '岐阜1-1' }
-    building_name            { 'アパート' }
     telephone_number         { '11122223333' }
   end
 end
