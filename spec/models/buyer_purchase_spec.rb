@@ -10,6 +10,10 @@ RSpec.describe BuyerPurchase, type: :model do
       it '全ての項目が存在すれば購入できる' do
         expect(@buyer_purchase).to be_valid
       end
+      it 'building_nameがなくても購入できる' do
+        @buyer_purchase.building_name = ''
+        expect(@buyer_purchase).to be_valid
+      end
     end
 
     context '商品購入がうまくいかないとき' do
