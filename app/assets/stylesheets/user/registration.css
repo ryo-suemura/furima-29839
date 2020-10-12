@@ -147,9 +147,23 @@
   cursor: pointer;
 }
 
+
+
 .register-info {
   margin: 30px 180px 0 0;
   color: #0099e8;
   text-align: right;
   cursor: pointer;
 }
+
+.sns-credential {
+  margin: 30px 180px 0 0;
+  justify-content: center;
+}
+
+.sns-list {
+  width: 100%;
+  color: red;
+  display: block;
+}
+
