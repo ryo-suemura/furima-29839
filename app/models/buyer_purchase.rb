@@ -4,10 +4,10 @@ class BuyerPurchase
 
   with_options presence: true do
     validates :token
-    validates :postal_code, format: { with: /\A\d{3}[-]\d{4}\z/, message: 'input correctly' }
+    validates :postal_code, format: { with: /\A\d{3}[-]\d{4}\z/, message: "は正しく入力してください" }
     validates :place_id, numericality: { other_than: 1 }
     validates :city, :address
-    validates :telephone_number, format: { with: /\A\d{10,11}\z/, message: 'is under 11 degit' }
+    validates :telephone_number, format: { with: /\A\d{10,11}\z/, message: "は11文字以下で入力してください" }
   end
 
   def save

@@ -20,42 +20,42 @@ RSpec.describe BuyerPurchase, type: :model do
       it 'token情報がなければ購入できない' do
         @buyer_purchase.token = ''
         @buyer_purchase.valid?
-        expect(@buyer_purchase.errors.full_messages).to include("Token can't be blank")
+        expect(@buyer_purchase.errors.full_messages).to include("クレジットカード情報を入力してください")
       end
       it 'postal_codeがなければ購入できない' do
         @buyer_purchase.postal_code = ''
         @buyer_purchase.valid?
-        expect(@buyer_purchase.errors.full_messages).to include("Postal code can't be blank")
+        expect(@buyer_purchase.errors.full_messages).to include("郵便番号を入力してください")
       end
       it 'postal_codeにハイフンがなければ購入できない' do
         @buyer_purchase.postal_code = '1234567'
         @buyer_purchase.valid?
-        expect(@buyer_purchase.errors.full_messages).to include('Postal code input correctly')
+        expect(@buyer_purchase.errors.full_messages).to include('郵便番号は正しく入力してください')
       end
       it 'place_idがなければ購入できない' do
         @buyer_purchase.place_id = '1'
         @buyer_purchase.valid?
-        expect(@buyer_purchase.errors.full_messages).to include('Place must be other than 1')
+        expect(@buyer_purchase.errors.full_messages).to include('都道府県は1以外の値にしてください')
       end
       it 'cityがなければ購入できない' do
         @buyer_purchase.city = ''
         @buyer_purchase.valid?
-        expect(@buyer_purchase.errors.full_messages).to include("City can't be blank")
+        expect(@buyer_purchase.errors.full_messages).to include("市区町村を入力してください")
       end
       it 'addressがなければ購入できない' do
         @buyer_purchase.address = ''
         @buyer_purchase.valid?
-        expect(@buyer_purchase.errors.full_messages).to include("Address can't be blank")
+        expect(@buyer_purchase.errors.full_messages).to include("番地を入力してください")
       end
       it 'telephone_numberがなければ購入できない' do
         @buyer_purchase.telephone_number = ''
         @buyer_purchase.valid?
-        expect(@buyer_purchase.errors.full_messages).to include("Telephone number can't be blank")
+        expect(@buyer_purchase.errors.full_messages).to include("電話番号を入力してください")
       end
       it 'telephone_numberは11桁以内でなければ購入できない' do
         @buyer_purchase.telephone_number = '111222233334'
         @buyer_purchase.valid?
-        expect(@buyer_purchase.errors.full_messages).to include('Telephone number is under 11 degit')
+        expect(@buyer_purchase.errors.full_messages).to include('電話番号は11文字以下で入力してください')
       end
     end
   end
