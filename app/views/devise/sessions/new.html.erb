@@ -28,10 +28,14 @@
   <div class='login-btn'>
     <%= f.submit "ログイン" ,class:"login-red-btn" %>
   </div>
-    <div class='sns-credential'>
-    <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post%>
-    <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
-  </div>
+  <ul class='sns-credential'>
+    <li class='sns-list'>
+      <%= link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post%>
+    </li>
+    <li class='sns-list'>
+      <%= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post%>
+    </li>
+  </ul>
 </div>
 <% end %>
 
